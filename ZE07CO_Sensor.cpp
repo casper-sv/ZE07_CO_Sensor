@@ -99,7 +99,7 @@ boolean ZE07CO_Sensor::available(uint16_t timeout)		//new data was recevied
 	} else {
     boucle();
 	}
-	if ((receivedCommandStack[MAXLENGTH-1]==checkSum(receivedCommandStack,MAXLENGTH)) && (_status = STATUS_OK)){
+	if ((receivedCommandStack[MAXLENGTH-1]==checkSum(receivedCommandStack,MAXLENGTH)) && (_status == STATUS_OK)){
 		receivedFlag = 1;			//new data received
 		return receivedFlag;
 	} else {
